@@ -12,7 +12,7 @@ const AboutUs = () => (
       <img src={images.G} alt="letter G" />
     </div>
 
-    <div className="app__aboutus-content flex_center">
+    <div className="app__aboutus-content flex__center">
 
       <div className="app__aboutus-content_about">
         <h1 className="headtext__cormorant">About Us</h1>
