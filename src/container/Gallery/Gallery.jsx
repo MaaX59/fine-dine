@@ -1,4 +1,4 @@
-import React from "react";
+import {React, useRef} from "react";
 import {
   BsInstagram,
   BsArrowLeftShort,
@@ -12,14 +12,14 @@ import "./Gallery.css";
 const galleryImages = [images.gallery01, images.gallery02, images.gallery03, images.gallery04, images.gallery05];
 
 const Gallery = () => {
-  const scrollRef = React.useRef(null);
+  const scrollRef = useRef(null);
 
   const scroll = (direction) => {
     const { current } = scrollRef;
     if (direction === "left") {
-      current.scrollRef -= 300;
+      current.scrollLeft -= 300;
     } else {
-      current.scroll += 300;
+      current.scrollLeft += 300;
     }
   };
 
@@ -48,7 +48,7 @@ const Gallery = () => {
             </div>
           ))}
         </div>
-        <div className="app__gallery-images_arrow">
+        <div className="app__gallery-images_arrows">
           <BsArrowLeftShort
             className="gallery__arrow-icon"
             onClick={() => scroll("left")}
